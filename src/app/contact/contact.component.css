@@ -1,0 +1,183 @@
+.main-intro {
+  margin-left: 50px;
+  margin-top: 30px;
+  font-style: normal;
+}
+
+.contact-form {
+  margin-left: 50px;
+  margin-top: 50px;
+  width: 50%;
+}
+
+input,
+textarea {
+  width: 95%;
+}
+
+input {
+  padding-top: 22px;
+  padding-bottom: 22px;
+}
+
+textarea {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+button.btn {
+  padding: 15px 100px 15px 100px;
+  margin-top: 20px;
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+button.btn.animated-button.submit-message {
+  cursor: pointer;
+  position: relative;
+  border: 2px solid #2176ff;
+  transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+}
+button.btn.animated-button.submit-message:hover {
+  color: white;
+  background-color: transparent;
+  text-shadow: nthree;
+}
+button.btn.animated-button.submit-message:hover:before {
+  left: 0%;
+  right: auto;
+  width: 100%;
+}
+button.btn.animated-button.submit-message:before {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  height: 100%;
+  width: 0px;
+  z-index: -1;
+  content: "";
+  background: #2176ff;
+  transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+/* Thumbs Up! */
+.thumbs-up {
+  animation-name: thumbsup-animation; /* Refers to the name of your @keyframes element below */
+  animation-duration: 1.5s; /* Change to speed up or slow down */
+  animation-iteration-count: 1; /* Can be 'infinite' to never stop waving! */
+  transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
+  display: inline-block;
+  animation-play-state: running;
+  cursor: default;
+}
+
+@keyframes thumbsup-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  30% {
+    transform: rotate(-14deg);
+  }
+  50% {
+    transform: rotate(8deg);
+  }
+  70% {
+    transform: rotate(6deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+label {
+  font-size: 20px;
+}
+
+.bi-check2-all {
+  font-size: 1.4rem;
+}
+
+#send-message-button {
+  padding-bottom: 0.3rem;
+  padding-top: 0.5rem;
+  text-transform: uppercase;
+}
+
+.bi-chat-square-quote {
+  font-size: 2rem;
+}
+
+#sending-message-button {
+  cursor: default;
+  border: 2px solid #2176ff;
+  text-transform: uppercase;
+  padding-bottom: 1rem;
+}
+
+#sent-message-button {
+  cursor: default;
+  border: 2px solid #2176ff;
+  text-transform: uppercase;
+  padding-bottom: 0.7rem;
+}
+
+/* ---------------------- Media queries ---------------------- */
+
+@media (max-width: 992px) {
+  .main-intro {
+    margin-left: 10px;
+    margin-left: 10px;
+    margin-top: 30px;
+    font-style: normal;
+    width: 100%;
+  }
+
+  .contact-form {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 30px;
+    width: 100%;
+  }
+
+  label {
+    font-size: 16px;
+  }
+
+  input {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  textarea {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .bi-chat-square-quote {
+    font-size: 1.5rem;
+  }
+
+  #send-message-button {
+    margin-top: 20px;
+    font-size: 16px;
+    padding: 10px 10px 8px 10px;
+    min-width: 300px;
+    max-width: 300px;
+  }
+
+  #sending-message-button {
+    margin-top: 20px;
+    font-size: 16px;
+    padding: 15px;
+    min-width: 300px;
+    max-width: 300px;
+  }
+
+  #sent-message-button {
+    margin-top: 20px;
+    font-size: 16px;
+    padding: 10px;
+    min-width: 300px;
+    max-width: 300px;
+  }
+}

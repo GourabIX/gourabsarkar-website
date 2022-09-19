@@ -1,0 +1,191 @@
+.row {
+  margin-top: 60px;
+  padding-bottom: 30px;
+}
+
+.footer-block-main,
+.footer-block-social,
+.footer-block-about {
+  margin-top: 50px;
+  padding: 0px 60px 0px 60px;
+  text-transform: uppercase;
+}
+
+.bi-bookmark-star,
+.bi-at,
+.bi-person-square {
+  display: inline-block; /* Necessary for transform: scale() */
+  font-size: 1.8rem;
+  color: black;
+  transform: scale(1);
+  transition: all 0.2s ease-in;
+  transform: translate(0px, 0px);
+}
+
+.footer-block-main:hover .bi-bookmark-star {
+  color: #ff6d00;
+  transform: scale(1.1);
+  transition: all 0.1s ease-in-out;
+}
+
+.footer-block-social:hover .bi-at {
+  color: royalblue;
+  transform: scale(1.3);
+  transition: all 0.1s ease-in-out;
+}
+
+.footer-block-about:hover .bi-person-square {
+  color: #ff3366;
+  transform: scale(1.1);
+  transition: all 0.1s ease-in-out;
+}
+
+.bi-heart {
+  display: inline-block; /* Necessary for transform: scale() */
+  color: #ff0054;
+  transform: scale(1);
+  transition: all 0.2s ease-in;
+  transform: translate(0px, 0px);
+}
+
+.bi-heart:hover {
+  transform: scale(1.2);
+  transition: all 0.1s ease-in-out;
+}
+
+.footer-block-main-subtitle {
+  font-family: "Arvo", serif;
+  padding-left: 15px;
+  letter-spacing: 1.25px;
+}
+
+.footer-block {
+  padding: 20px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.bi-github,
+.bi-github:visited {
+  display: inline-block; /* Necessary for transform: scale() */
+  font-size: 2rem;
+  color: #39393a;
+  transform: scale(1);
+  transition: all 0.2s ease-in;
+  transform: translate(0px, 0px);
+}
+
+.bi-github:hover {
+  filter: brightness(0.85);
+  transform: scale(1.2);
+  transition: all 0.1s ease-in;
+}
+
+.bi-linkedin,
+.bi-linkedin:visited {
+  display: inline-block; /* Necessary for transform: scale() */
+  font-size: 2rem;
+  color: rgb(17, 92, 167);
+  transform: scale(1);
+  transition: all 0.2s ease-in;
+  transform: translate(0px, 0px);
+}
+
+.bi-linkedin:hover {
+  filter: brightness(0.85);
+  transform: scale(1.15);
+  transition: all 0.1s ease-in;
+}
+
+.bi-twitter,
+.bi-twitter:visited {
+  display: inline-block; /* Necessary for transform: scale() */
+  font-size: 2rem;
+  color: dodgerblue;
+  transform: scale(1);
+  transition: all 0.2s ease-in;
+  transform: translate(0px, 0px);
+}
+
+.bi-twitter:hover {
+  filter: brightness(0.85);
+  transform: scale(1.2);
+  transition: all 0.1s ease-in;
+}
+
+.bi-envelope-fill,
+bi-envelope-fill:visited {
+  display: inline-block; /* Necessary for transform: scale() */
+  font-size: 2rem;
+  color: rgb(255, 65, 65);
+  transform: scale(1);
+  transition: all 0.2s ease-in;
+  transform: translate(0px, 0px);
+}
+
+.bi-envelope-fill:hover {
+  filter: brightness(0.85);
+  transform: scale(1.2);
+  transition: all 0.1s ease-in;
+}
+
+.bi-github:active,
+.bi-github:focus,
+.bi-linkedin:active,
+.bi-linkedin:focus,
+.bi-twitter:active,
+.bi-twitter:focus,
+.bi-envelope-fill:active,
+.bi-envelope-fill:focus {
+  transform: scale(1.2) translate(0px, -10px);
+  transition: all 0.2s ease-in-out;
+}
+
+#s9-logo-svg,
+#s9-logo-svg:visited {
+  max-height: 40px;
+  max-width: 40px;
+  transform: scale(1);
+  transition: all 0.1s ease-in;
+}
+
+#s9-logo-svg:hover {
+  filter: brightness(0.85);
+  transform: scale(1.2);
+  transition: all 0.1s ease-in;
+}
+
+#s9-logo-svg:active,
+#s9-logo-svg:focus {
+  transform: scale(1.2) translate(0px, -10px);
+  transition: all 0.2s ease-in-out;
+}
+
+.footer-block-main a {
+  color: darkslategrey;
+  text-decoration: none;
+  transition: all 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+.footer-block-main a:hover {
+  color: #5f27cd;
+  text-decoration: none;
+  transition: all 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+#contact-link-social-block {
+  color: darkslategrey;
+  text-decoration: none;
+  transition: all 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+#contact-link-social-block:hover {
+  color: #5f27cd;
+  text-decoration: none;
+  transition: all 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+.card-img-top {
+  width: 100%;
+  height: 22vh;
+  object-fit: cover;
+}

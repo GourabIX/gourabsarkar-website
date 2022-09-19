@@ -1,0 +1,126 @@
+<div class="container-fluid clearfix">
+  <div *ngIf="!formSubmitted" class="subtitle main-intro">
+    Let's work together.
+  </div>
+  <div *ngIf="formSubmitted" class="subtitle main-intro">
+    <p style="color: #2176ff">
+      Thanks a bunch for reaching out! <span class="thumbs-up">👍</span>
+    </p>
+  </div>
+  <div class="contact-form">
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="userEmail">Your email</label>
+        <input
+          type="email"
+          class="form-control shadow-sm"
+          id="userEmail"
+          placeholder="name@example.com"
+          formControlName="userEmail"
+          required
+          email
+          [ngClass]="{
+            'is-invalid':
+              (userEmail!.invalid &&
+                (userEmail!.dirty || userEmail!.touched)) ||
+              (userEmail!.invalid && formSubmitAttempted)
+          }"
+        />
+        <small id="private-email" class="form-text text-muted"
+          >Your email address will stay private.</small
+        >
+        <div
+          *ngIf="
+            (userEmail!.invalid && (userEmail!.dirty || userEmail!.touched)) ||
+            (userEmail!.invalid && formSubmitAttempted)
+          "
+        >
+          <div
+            *ngIf="userEmail!.errors?.required"
+            class="small form-text text-danger"
+          >
+            Looks like you didn't provide your email.
+          </div>
+          <div
+            *ngIf="userEmail!.errors?.email"
+            class="small form-text text-danger"
+          >
+            Please provide a valid email address.
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="userMessage">Your message</label>
+        <textarea
+          class="form-control shadow-sm"
+          id="userMessage"
+          formControlName="userMessage"
+          rows="6"
+          placeholder="I'd love to know what you'd have to say!"
+          [ngClass]="{
+            'is-invalid':
+              (userMessage!.invalid &&
+                (userMessage!.dirty || userMessage!.touched)) ||
+              (userMessage!.invalid && formSubmitAttempted)
+          }"
+        ></textarea>
+        <div
+          *ngIf="
+            (userMessage!.invalid &&
+              (userMessage!.dirty || userMessage!.touched)) ||
+            (userMessage!.invalid && formSubmitAttempted)
+          "
+        >
+          <div
+            *ngIf="userMessage!.errors?.required"
+            class="small form-text text-danger"
+          >
+            Please provide your message.
+          </div>
+          <div
+            *ngIf="userMessage!.errors?.minlength"
+            class="small form-text text-danger"
+          >
+            Your message needs to be just a bit longer.
+          </div>
+        </div>
+      </div>
+      <div class="form-group" *ngIf="!formSubmitted">
+        <button
+          type="submit"
+          class="btn animated-button submit-message shadow-none"
+          id="send-message-button"
+          *ngIf="!this.formSubmitInProgress"
+        >
+          <i class="bi bi-chat-square-quote align-middle mr-2"></i>
+          Send Message
+        </button>
+        <button
+          class="btn shadow-none"
+          type="button"
+          id="sending-message-button"
+          disabled
+          *ngIf="this.formSubmitInProgress"
+        >
+          <span
+            class="spinner-border spinner-border-sm mb-1 mr-1"
+            role="status"
+            aria-hidden="true"
+          ></span>
+          Sending message...
+        </button>
+      </div>
+    </form>
+    <div class="message-sent" *ngIf="formSubmitted">
+      <button
+        type="button"
+        class="btn shadow-none"
+        id="sent-message-button"
+        disabled
+      >
+        <i class="bi bi-check2-all align-middle"></i>
+        Message sent
+      </button>
+    </div>
+  </div>
+</div>

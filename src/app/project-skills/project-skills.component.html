@@ -1,0 +1,65 @@
+<div class="container-fluid">
+  <div class="subtitle main-intro">Gallery: Projects and Skills</div>
+  <div class="d-flex" *ngIf="projectsLoading">
+    <span class="spinner-border projects-loader-spinner" role="status">
+      <span class="sr-only">Just a moment...</span>
+    </span>
+    <h5 class="ml-3 mt-1">Just a sec...</h5>
+  </div>
+  <div class="row row-cols-1 row-cols-md-3 project-cards-grid">
+    <div class="col mb-4" *ngFor="let project of projectList">
+      <div class="card bg-transparent h-100 shadow">
+        <h5 class="card-header panel-header panel-custom">
+          {{ project.title }}
+        </h5>
+        <div class="card-body">
+          <h5 class="card-subtitle mb-2 text-muted">
+            {{ project.subtitle }}
+          </h5>
+          <p class="card-text text-justify">
+            {{ project.description }}
+          </p>
+          <p class="card-text text-justify">
+            Built with {{ project.techStack }}
+          </p>
+        </div>
+        <div class="card-footer panel-footer panel-custom">
+          <div *ngIf="project.demoUrl; else demoNotAvailable">
+            <a
+              href="{{ project.demoUrl }}"
+              class="badge badge-success p-1"
+              target="_blank"
+              rel="noreferrer"
+              style="text-decoration: none"
+              *ngIf="project.demoUrl !== 'http://localhost:4200'; else current"
+              >{{ project.urlText }}
+            </a>
+            <i
+              class="bi bi-box-arrow-up-right align-middle float-right"
+              *ngIf="project.demoUrl !== 'http://localhost:4200'"
+              style="color: dodgerblue; font-size: 1rem"
+            ></i>
+          </div>
+          <ng-template #demoNotAvailable>
+            <small class="text-muted"
+              >Live demo not available yet.
+              <i
+                class="bi bi-clock-history align-middle float-right"
+                style="font-size: 1.05rem"
+              ></i>
+            </small>
+          </ng-template>
+          <ng-template #current>
+            <small style="font-size: 13px"
+              >You're here. Thanks for visiting!</small
+            >
+            <i
+              class="bi bi-geo-alt align-middle float-right"
+              style="font-size: 1.05rem"
+            ></i>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,314 @@
+.main-intro {
+  margin-left: 50px;
+  margin-top: 30px;
+}
+
+.contact-buttons-primary {
+  margin-left: 50px;
+}
+
+button.btn {
+  text-transform: uppercase;
+  font-size: 20px;
+  margin-right: 10px;
+  padding: 10px 90px 5px 90px;
+}
+
+button.btn.animated-button.primary-contact {
+  cursor: pointer;
+  position: relative;
+  border: 2px solid #2176ff;
+  transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+}
+button.btn.animated-button.primary-contact:hover {
+  color: white;
+  background-color: transparent;
+  text-shadow: nthree;
+}
+button.btn.animated-button.primary-contact:hover:before {
+  left: 0%;
+  right: auto;
+  width: 100%;
+}
+button.btn.animated-button.primary-contact:before {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  height: 100%;
+  width: 0px;
+  z-index: -1;
+  content: "";
+  background: #2176ff;
+  transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+#resume-button {
+  font-size: 20px;
+  cursor: pointer;
+  position: relative;
+  border: 2px solid #5f27cd;
+  transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+  padding: 10px 100px 5px 100px;
+}
+#resume-button:hover {
+  color: white;
+  background-color: transparent;
+  text-shadow: nthree;
+}
+#resume-button:hover:before {
+  left: 0%;
+  right: auto;
+  width: 100%;
+}
+#resume-button:before {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  height: 100%;
+  width: 0px;
+  z-index: -1;
+  content: "";
+  background: #5f27cd;
+  transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+/* Say hi! */
+.wave {
+  animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
+  animation-duration: 2.5s; /* Change to speed up or slow down */
+  animation-iteration-count: 2; /* Can be 'infinite' to never stop waving! */
+  transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
+  display: inline-block;
+  animation-play-state: running;
+  cursor: default;
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  } /* The following five values can be played with to make the waving more or less extreme */
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  } /* Reset for the last half to pause */
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.profile-summary {
+  margin-top: 40px;
+  margin-left: 50px;
+  margin-bottom: 40px;
+}
+
+.profile-summary * {
+  width: 74%;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.contact-icons {
+  margin-top: 40px;
+  margin-left: 40px;
+}
+
+.bi-github,
+.bi-github:visited {
+  display: inline-block; /* Necessary for transform: scale() */
+  font-size: 3rem;
+  color: #39393a;
+  transform: scale(1);
+  transition: all 0.2s ease-in;
+  transform: translate(0px, 0px);
+}
+
+.bi-github:hover {
+  filter: brightness(0.85);
+  transform: scale(1.2);
+  transition: all 0.1s ease-in;
+}
+
+.bi-linkedin,
+.bi-linkedin:visited {
+  display: inline-block; /* Necessary for transform: scale() */
+  font-size: 3rem;
+  color: rgb(17, 92, 167);
+  transform: scale(1);
+  transition: all 0.2s ease-in;
+  transform: translate(0px, 0px);
+}
+
+.bi-linkedin:hover {
+  filter: brightness(0.85);
+  transform: scale(1.15);
+  transition: all 0.1s ease-in;
+}
+
+.bi-twitter,
+.bi-twitter:visited {
+  display: inline-block; /* Necessary for transform: scale() */
+  font-size: 3rem;
+  color: dodgerblue;
+  transform: scale(1);
+  transition: all 0.2s ease-in;
+  transform: translate(0px, 0px);
+}
+
+.bi-twitter:hover {
+  filter: brightness(0.85);
+  transform: scale(1.2);
+  transition: all 0.1s ease-in;
+}
+
+.bi-envelope-fill,
+.bi-envelope-fill:visited {
+  display: inline-block; /* Necessary for transform: scale() */
+  font-size: 3rem;
+  color: rgb(255, 65, 65);
+  transform: scale(1);
+  transition: all 0.2s ease-in;
+  transform: translate(0px, 0px);
+}
+
+.bi-envelope-fill:hover {
+  filter: brightness(0.85);
+  transform: scale(1.2);
+  transition: all 0.1s ease-in;
+}
+
+.bi-github:active,
+.bi-github:focus,
+.bi-linkedin:active,
+.bi-linkedin:focus,
+.bi-twitter:active,
+.bi-twitter:focus,
+.bi-envelope-fill:active,
+.bi-envelope-fill:focus {
+  transform: scale(1.2) translate(0px, -10px);
+  transition: all 0.1s ease-in-out;
+}
+
+#s9-logo-svg,
+#s9-logo-svg:visited {
+  max-height: 55px;
+  max-width: 55px;
+  transform: scale(1);
+  transition: all 0.1s ease-in;
+}
+
+#s9-logo-svg:hover {
+  filter: brightness(0.85);
+  transform: scale(1.2);
+  transition: all 0.1s ease-in;
+}
+
+#s9-logo-svg:active,
+#s9-logo-svg:focus {
+  transform: scale(1.2) translate(0px, -10px);
+  transition: all 0.2s ease-in-out;
+}
+
+#also-reach-me {
+  font-size: 30px;
+  cursor: default;
+}
+
+#contact-icons-arrow,
+#contact-button-icon,
+#resume-button-icon {
+  font-size: 2rem;
+}
+
+/* --------------------- Media queries --------------------- */
+
+@media (max-width: 992px) {
+  .main-intro,
+  .profile-summary,
+  .contact-buttons-primary {
+    margin: 10px;
+  }
+
+  .profile-summary * {
+    width: 100%;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  button.btn {
+    text-transform: uppercase;
+    font-size: 16px;
+  }
+
+  #resume-button,
+  #contact-button {
+    margin-top: 20px;
+    font-size: 16px;
+    padding: 10px 10px 7px 10px;
+    min-width: 300px;
+    max-width: 300px;
+  }
+
+  #also-reach-me {
+    font-size: 18px;
+    padding: 0px;
+    margin-top: 5px;
+  }
+
+  .contact-icons {
+    margin-top: 20px;
+    margin-left: 10px;
+  }
+
+  #profile-icons {
+    display: block;
+    margin-left: 0px;
+  }
+
+  .bi-github,
+  .bi-twitter,
+  .bi-linkedin,
+  .bi-envelope-fill {
+    font-size: 2rem;
+  }
+
+  #github-ico-btn {
+    padding-left: 0px;
+    margin-left: 0px;
+  }
+
+  #github-logo-ico {
+    margin-left: 0px;
+  }
+
+  #s9-logo-svg,
+  #s9-logo-svg:visited {
+    max-height: 35px;
+    max-width: 35px;
+  }
+
+  #contact-icons-arrow,
+  #contact-button-icon,
+  #resume-button-icon {
+    font-size: 1.25rem;
+  }
+
+  #profile-contact-icons {
+    display: block;
+    margin-left: 0px;
+  }
+}

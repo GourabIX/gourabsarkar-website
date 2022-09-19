@@ -1,0 +1,20 @@
+<div class="container-fluid">
+  <div class="subtitle main-intro">Privacy: Analytics and your data</div>
+  <div class="privacy-details">
+    <div class="text-wrap text-justify">
+      <p *ngFor="let privacyText of privacyTextList">{{ privacyText }}</p>
+    </div>
+    <div class="text-wrap text-justify" id="privacy-three">
+      <p>
+        If you send me a message via the
+        <a
+          routerLink="/contact"
+          routerLinkActive="active"
+          style="text-decoration: none"
+          >contact form</a
+        >, then your email address, and message content will be stored in a
+        Firebase database.
+      </p>
+    </div>
+  </div>
+</div>

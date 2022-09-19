@@ -1,0 +1,19 @@
+a {
+  text-transform: lowercase;
+  font-size: 22px;
+}
+
+.activeNav {
+  text-align: center;
+  border-bottom: 3px solid;
+  border-image: linear-gradient(
+      to right,
+      royalblue 25%,
+      #ff3366 25%,
+      #ff3366 50%,
+      #5f27cd 50%,
+      #5f27cd 75%,
+      #ffa502 75%
+    )
+    5;
+}

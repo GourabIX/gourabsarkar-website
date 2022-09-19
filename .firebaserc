@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "fire-phoenix-gourabix": {
+      "hosting": {
+        "the-gourabix-project-v2": [
+          "fire-phoenix-gourabix"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Arvo&family=Work+Sans&display=swap");
+
+h1,
+h2,
+h3,
+.h1,
+.h2,
+.h3,
+.title,
+.subtitle {
+  font-family: "Arvo", serif;
+}
+
+* {
+  font-family: "Work Sans", sans-serif;
+}
+
+.title {
+  font-size: 95px;
+}
+
+.subtitle {
+  font-size: 64px;
+}
+
+/* Media queries */
+@media (max-width: 992px) {
+  .title {
+    font-size: 38px;
+  }
+
+  .subtitle {
+    font-size: 28px;
+  }
+}
