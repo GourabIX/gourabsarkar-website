@@ -26,7 +26,7 @@ export class HomeComponent implements OnInit {
   }
 
   calculateExperience() {
-    let firstJobDate = new Date(2018, 7);
+    let firstJobDate = new Date(2019, 7);
     let currentDate = new Date();
     let experience = new Date(currentDate.getTime() - firstJobDate.getTime());
 

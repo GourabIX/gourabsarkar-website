@@ -1,4 +1,6 @@
-# TheGourabixProjectV2
+# Gourab Sarkar's portfolio website
+
+Build status: [![Netlify Status](https://api.netlify.com/api/v1/badges/ab66e97c-150f-43a8-9098-dded5e640beb/deploy-status)](https://app.netlify.com/sites/gourabsarkar/deploys)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.14.
 
