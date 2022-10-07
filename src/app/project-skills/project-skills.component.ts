@@ -17,10 +17,12 @@ export class ProjectSkillsComponent implements OnInit {
     this.retrieveAllProjects();
   }
 
-  retrieveAllProjects() {
+  retrieveAllProjects(): void {
     this.projectList = [];
+
     this._projectService.retrieveProjects().subscribe((data) => {
       this.projectsLoading = true;
+
       data.forEach((project) => {
         this.projectList.push(
           new Project(
@@ -34,7 +36,15 @@ export class ProjectSkillsComponent implements OnInit {
           )
         );
       });
+
+      this.sortProjectsByCompletedYear();
       this.projectsLoading = false;
+    });
+  }
+
+  sortProjectsByCompletedYear(): void {
+    this.projectList.sort((projA: any, projB: any) => {
+      return projB.completedYear - projA.completedYear;
     });
   }
 }
